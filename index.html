@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estoque - Cadastro de novos produtos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/funcoes.js"></script>
+</head>
+
+<body onload="carregarTotalEstoque('totalEstoque')">
+    <!--Carrinho de compras-->
+    <div class="carrinho">
+        <img src="img/estoque.png">
+        <p>Itens no estoque: <span id="totalEstoque">0</span></p>
+    </div>
+    
+    <!--Formulário: Nome, código e quantidade de produtos-->
+    <form>
+        <table>
+            <caption>Controle de Estoque</caption>
+            <!--Nome do produto-->
+            <tr>
+                <td class="alinharRotulos">Nome do produto:</td>
+                <td><input id="txtNomeProduto" type="text" placeholder="Nome do produto..."></td>
+            </tr>
+            <!--Código do produto-->
+            <tr>
+                <td class="alinharRotulos">Código do produto:</td>
+                <td><input id="txtCodProduto" type="text" placeholder="Código do produto..."></td>
+            </tr>
+            <!--Quantidade do produto-->
+            <tr>
+                <td class="alinharRotulos">Quantidade do produto:</td>
+                <td><input id="qtidadeProduto" type="text" placeholder="Quantidade do produto...">
+                </td>
+            </tr>
+            <!--Validade do produto-->
+            <tr>
+                <td class="alinharRotulos">Validade do Produto:</td>
+                <td><input id="validade" type="text" placeholder="Validade do Produto...">
+                </td>
+            </tr>
+            <!--Botoes-->
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="Cadastrar" class="alinhaBtns" onclick="validarProduto('txtNomeProduto','txtCodProduto','qtidadeProduto','validade')">
+                    <input type="button" value="Ver estoque" class="alinhaBtns" onclick="window.open('verEstoque.html','_self')">
+                    <input type="reset" value="Limpar" class="alinhaBtns">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <footer>
+        <span>Copyright 2022 <a href="https://www.instagram.com/_cgula/">Carlos Gula</a> Todos os direitos reservados.</span>
+    </footer>
+
+</body>
+</html>
